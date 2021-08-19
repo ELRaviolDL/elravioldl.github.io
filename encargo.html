@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Realize encargos de Impresiones 3D a pedido">
+    <meta name="keywords" content="IMPRESION, 3D, ENCARGO, PEDIDO, PERSONALIZADO, COMISION, PLA, FDM, PLASTICO, TECNICO">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <title>Impresiones 3D6 - Encargos</title>
+</head>
+<body>
+    <header >
+        <!-- Esto es un pequeño menú de navegación-->
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3e4970;">
+            <a class="navbar-brand" href="index.html"><img alt="Hogar" href="index.html" src="img/LogoHome.png" width="80" height="80">Impresiones 3D6</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="catalogo.html">Catalogo</a>
+                    <a class="nav-item nav-link active" href="direccion.html">Dirección</a>
+                    <a class="nav-item nav-link active" href="contacto.html">Contacto</a>
+                    <a class="nav-item nav-link active" href="encargo.html">Encargos (Actual)</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--se tiene un formulario para completar encargos personalizados -->
+    <div>
+        <form id="app-login" action="process.php" method="POST" enctype="text/plain">
+            <fieldset>
+                <legend>Información de Encargo</legend>
+                <div>
+                    <label for="user-name">Correo:</label>
+                    <input name="user-name" type="email" placeholder="Inserte su email" required autofocus>
+                    <label for="check">Acepto que utilicen mi e mail para contactarse conmigo</label>
+                    <input name="check" type="checkbox">
+                </div>
+                <label for="title">Encargo</label>
+                <div>
+                    <select id="title" name="title">
+                        <option value="" selected>Seleccione el tipo de encargo</option>
+                        <option value="Terreno">Terreno</option>
+                        <option value="Figura">Figura</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="message">Especifique medidas y requerimientos:</label>
+                    <textarea cols="50" rows="10"></textarea>
+                </div>
+                <div>
+                    <input type="file" id="myFile" name="filename">
+                    <input type="submit">
+                    <input name="reset" type="reset" value="Resetear Valores">
+                    <input name="enviar" type="submit" value="Enviar">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <footer>
+        <h4>Copyright 2021 Augusto Lastra</h4>
+    </footer>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
